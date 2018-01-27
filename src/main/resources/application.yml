@@ -9,3 +9,16 @@ eureka:
 spring:
   application:
     name: gateway-server
+    
+zuul:
+  routes:
+    core:
+      path: /core-service/**
+      url: http://localhost:8098
+    user:
+      path: /user-service/**
+      url: http://localhost:8099
+    ui:
+      path : /ui-service/**
+      url: http://localhost:8097
+    

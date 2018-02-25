@@ -12,9 +12,12 @@ spring:
     
 zuul:
   routes:
-    core:
-      path: /core-service/**
-      url: http://localhost:8098
+    zone1:
+      path: /core-service/zone-1/**
+      url: http://localhost:8000
+    zone2:
+      path: /core-service/zone-2/**
+      url: http://localhost:8001
     user:
       path: /user-service/**
       url: http://localhost:8099
